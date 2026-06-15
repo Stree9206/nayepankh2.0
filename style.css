@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0d1117;
+  color: #e6edf3;
+}
+
+/* NAV */
+header {
+  background: #161b22;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+header h1 {
+  color: #F59E0B;
+  font-size: 1.3rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #F59E0B;
+}
+
+/* HERO */
+#Home {
+  background: linear-gradient(135deg, #1B4332, #2d6a4f);
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+#Home h2 {
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #fff;
+  animation: fadeIn 1s ease;
+}
+
+#Home p {
+  color: #a7f3d0;
+  margin: 1rem 0 2rem;
+  font-weight: 700;
+}
+
+button {
+  background: #F59E0B;
+  color: #111;
+  border: none;
+  padding: 0.8rem 2.2rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.06);
+}
+
+/* SECTIONS */
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #F59E0B;
+  margin-bottom: 1.5rem;
+}
+
+section p {
+  color: #8b949e;
+  line-height: 1.8;
+  font-weight: 600;
+}
+
+/* IMAGES */
+.img-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.img-row img {
+  width: 220px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.img-row img:hover {
+  transform: scale(1.05);
+}
+/* PROGRAMS */
+.card-row {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  background: #050f1a;
+  border: 1px solid #1e2a3a;
+  border-radius: 10px;
+  padding: 18px;
+  text-align: left;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.card:hover {
+  border-color: #22c55e;
+  transform: translateY(-3px);
+}
+
+.card h3 {
+  min-width: 220px;
+  color: #22c55e;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.card p {
+  margin: 0;
+  color: #aaa;
+  font-size: 0.95rem;
+  font-weight: normal;
+  line-height: 1.7;
+  flex: 1;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card h3 {
+    min-width: auto;
+  }
+}
+
+/* PROGRAM CARDS - CENTERED
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: #161b22;
+  border: 2px solid #238636;
+  color: #F59E0B;
+  font-weight: 700;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #F59E0B;
+} */
+
+/* STATS */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.stat {
+  background: #1B4332;
+  border-radius: 12px;
+  padding: 1.5rem;
+  min-width: 130px;
+  max-width: 180px;
+  flex: 1;
+}
+
+.stat h3 {
+  color: #F59E0B;
+  font-size: 2rem;
+}
+
+.stat p {
+  color: #a7f3d0;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* CONTACT */
+.contact {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.contact p {
+  color: #F59E0B;
+  font-weight: 700;
+}
+
+/* FOOTER */
+footer {
+  background: #161b22;
+  text-align: center;
+  padding: 1.2rem;
+  color: #8b949e;
+  font-weight: 600;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  header {
+    justify-content: center;
+  }
+
+  .img-row img {
+    width: 160px;
+    height: 120px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 280px;
+  }
+}
